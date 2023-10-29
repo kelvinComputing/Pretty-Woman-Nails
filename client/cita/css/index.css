@@ -1,0 +1,9 @@
+@import './chat.css';
+@import './cita.css';
+@import './header.css';
+@import './footer.css';
+
+
+*{
+    margin: 0;
+}

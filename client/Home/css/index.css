@@ -1,0 +1,18 @@
+@import './header.css';
+@import './ubicacion.css';
+@import './login.css';
+@import './footer.css';
+@import './sliders.css';
+@import './empresa.css';
+@import './galery.css';
+@import './trabajadores.css';
+@import './service.css';
+@import './chat.css';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+

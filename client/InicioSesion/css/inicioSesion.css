@@ -1,0 +1,231 @@
+.container-login {
+    width: 100%;
+    height: 41rem;
+    background-image: url(../img/inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    position: relative;
+}
+
+.mensaje {
+    height: 40%;
+    width: 80%; 
+    display: grid;
+    place-items: center;
+}
+
+.mensaje h1 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: Monotype Corsiva;
+}
+
+.mensaje p {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.login {
+    background-color: #3ad4b6c2;
+    width: 26rem;
+    height: 33rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    border-radius: 10%;
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+.login h1 {
+    font-family: Monotype Corsiva;
+    margin: 0;
+    padding: 1.5rem 0 2rem;
+    font-weight: bold;
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.login label {
+    color: #faf9f9;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    text-align: start ;
+    margin-bottom: 3px;
+}
+
+.login input  {
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.login input[type='text'],
+.login input[type='password'] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 2rem;
+    color: #faf9f9;
+    font-size: 1rem;
+    text-indent: 2.5rem;
+}
+
+.buton {
+    width: 100%;
+    display: grid ;
+    justify-items: center;
+}
+
+.login input[type='submit'] {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    transition-duration: 0.4s;
+}
+
+#sing-up:hover{
+    background-color: rgb(224, 222, 222);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#sing-up:active{
+    transform: translateY(4px);
+}
+
+.login a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #faf9f9;
+    text-align: center;
+}
+
+#btn-reset-contraseña {
+    color: #faf9f9;
+    background: none;
+    border: none;
+}
+
+#btn-reset-contraseña:hover {
+    color: #eee6ea;
+    cursor: pointer;
+}
+
+.login a:hover {
+    color: #eee6ea;
+}
+
+.login a:active,
+#btn-reset-contraseña:active {
+    transform: translateY(4px);
+}
+
+#iconos {
+    position: absolute;
+}
+
+#icono-mostrar {
+    position: absolute;
+}
+
+#errorEmail, 
+#errorPassword {
+    color: #ff0000b4;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+.iniciast {
+    display: none;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .mensaje h1 {
+    font-size: 5rem;
+    }
+
+    .mensaje p {
+        font-size: 1.3rem;
+    }
+
+    .login {
+        width: 24rem;
+        height: 31rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .mensaje h1 {
+        font-size: 3rem;
+        }
+    
+    .mensaje p {
+        font-size: 1rem;
+    }
+
+    .login {
+        width: 18rem;
+        height: 25rem;
+    }
+
+    .login h1{
+        font-size: 2rem;
+    }
+
+    #iconos,
+    #icono-mostrar {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .container-login {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .mensaje {
+        place-items: start;
+        height: auto;
+    }
+
+    .login {
+        width: 18rem;
+        height: 23rem;
+    }
+
+    .login h1 {
+        padding: 1.5rem 0 0.8rem; 
+    }
+}
+
+
+
+

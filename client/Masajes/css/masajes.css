@@ -1,0 +1,197 @@
+@import './chat.css';
+@import './footer.css';
+@import './header.css';
+@import './emergente.css';
+
+
+*{
+    margin: 0;
+}
+
+.container-service-masajes {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.service-masajes-title {
+    width: auto;
+    margin: 1rem 1rem;   
+}
+
+.service-masajes-title h2 {
+    font-size: 2.5rem;
+}
+
+.service-masajes-title hr {
+    width: 95%;
+    height: 3px;
+    border: none;
+    background: #cef1ea;
+    margin-top: 1rem;  
+    text-align: center;  
+}
+
+.service-masajes-title p {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.service-masajes {
+    margin-top: 2rem;
+    width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 30px;
+}
+
+.masajes {
+    display: grid;
+    width: auto;
+    margin: 0 1rem;
+    height: 100%;
+    border: PowderBlue 5px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.masajes-img {
+    padding: 3px;  
+}
+
+.img {
+    width: auto;
+    height: 300px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 5%;
+}
+
+.img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.masajes-inf {
+    padding: 1rem;
+}
+
+.inf {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 0.5rem;   
+}
+
+.inf h3 {
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: start;
+    color: #b60dcc;
+}
+
+.inf p {
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: start;
+}
+
+.inf h4 {
+    font-size: 1.5rem;
+    width: 50px;
+    text-align: center;
+    color: #b60dcc;
+}
+
+.inf input[type='submit'] { 
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    transition-duration: 0.4s;
+    text-align: center;
+}
+
+.inf input[type='submit']:hover {
+    color: #15dab2c2;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+}
+
+.inf input[type='submit']:active {
+    transform: translateY(4px);
+}
+
+#btn-add-Serv {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    transition-duration: 0.4s;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+#btn-add-Serv:hover,
+#btnes:hover {
+    color: #15dab2c2;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+}
+
+#btnes  {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: auto;
+    transition-duration: 0.4s;
+    text-align: center;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .service-masajes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .service-masajes{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-masajes-title h2 {
+        text-align: center;
+    }
+
+    .service-masajes-title p {
+       text-align: center;
+    }
+}
+
+
+
+
+
+
+

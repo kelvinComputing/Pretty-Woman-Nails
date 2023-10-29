@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="./js/unpkg.com_scrollreveal@4.0.9_dist_scrollreveal.js"></script>
+    <title>Pretty Woman Nails</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-logo-menu">
+        <div class="logo">
+          <img src="./img/logo.jpg" alt="" width="58rem" height="58rem" />
+        </div>
+
+        <div class="barra-menu">
+          <svg
+            fill="#000000"
+            class="icon_menu"
+            viewBox="0 0 24.00 24.00"
+            id="menu-alt-4"
+            data-name="Line Color"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="0.192"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                id="secondary"
+                d="M8,9h8M8,12h8M8,15h8"
+                style="
+                  fill: none;
+                  stroke: #2ca9bc;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 0.792;
+                "
+              ></path>
+              <circle
+                id="primary"
+                cx="12"
+                cy="12"
+                r="9"
+                style="
+                  fill: none;
+                  stroke: #000000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 0.792;
+                "
+              ></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div class="container-menu">
+          <ul>
+            <li><a id="ruta-header-Home"> Home </a></li>
+            <li>
+              <a class="btn-service">
+                Servicio <i class="fas fa-caret-down"> </i>
+              </a>
+              <div class="down-menu">
+                <ul>
+                  <li><a id="ruta-header-Masaje">Masajes</a></li>
+                  <li>
+                    <a id="ruta-header-Proteccion">Protección de la Piel</a>
+                  </li>
+                  <li><a id="ruta-header-Manicura">Manicura & Pedicura</a></li>
+                  <li><a id="ruta-header-Cejas">Cejas</a></li>
+                  <li><a id="ruta-header-Pestañas">Pestañas</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a id="ruta-header-cita"> Cita </a></li>
+            <a href="/iniciosesion">
+              <svg
+                class="icon-login1"
+                fill="#000000"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+                enable-background="new 0 0 52 52"
+                xml:space="preserve"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M50,43v2.2c0,2.6-2.2,4.8-4.8,4.8H6.8C4.2,50,2,47.8,2,45.2V43c0-5.8,6.8-9.4,13.2-12.2 c0.2-0.1,0.4-0.2,0.6-0.3c0.5-0.2,1-0.2,1.5,0.1c2.6,1.7,5.5,2.6,8.6,2.6s6.1-1,8.6-2.6c0.5-0.3,1-0.3,1.5-0.1 c0.2,0.1,0.4,0.2,0.6,0.3C43.2,33.6,50,37.1,50,43z M26,2c6.6,0,11.9,5.9,11.9,13.2S32.6,28.4,26,28.4s-11.9-5.9-11.9-13.2 S19.4,2,26,2z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <div class="container-cart">
+              <a>
+                <svg
+                  class="icon-cart"
+                  viewBox="0 0 1024 1024"
+                  fill="#000000"
+                  class="icon"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M343.376 717.726a7.984 7.984 0 0 1-7.966-7.388 7.99 7.99 0 0 1 7.374-8.576L945 656.472l61.52-384.42H224.056c-4.422 0-8-3.576-8-7.998a7.994 7.994 0 0 1 8-7.998h791.836a8.01 8.01 0 0 1 7.904 9.264l-63.986 399.918a8.022 8.022 0 0 1-7.312 6.716l-608.514 45.756c-0.202 0.016-0.406 0.016-0.608 0.016zM312.03 719.96a7.988 7.988 0 0 1-7.716-5.922L128.35 58.168a7.99 7.99 0 0 1 5.654-9.794c4.266-1.124 8.654 1.376 9.794 5.654l175.962 655.874a7.994 7.994 0 0 1-5.654 9.794 7.988 7.988 0 0 1-2.076 0.264z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M343.382 717.758a7.992 7.992 0 0 1-7.716-5.92L151.078 26.182a8 8 0 0 1 15.45-4.154l184.586 685.654a8.012 8.012 0 0 1-5.646 9.81 7.97 7.97 0 0 1-2.086 0.266zM136.074 64.096H24.098a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h111.976a7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M158.804 32.104H24.098a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8h134.708a7.994 7.994 0 0 1 7.998 8 7.998 7.998 0 0 1-8 7.998z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M24.098 64.096C10.866 64.096 0.102 53.332 0.102 40.102c0-13.232 10.764-23.996 23.996-23.996a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998 8.002 8.002 0 0 0-7.998 7.998 8.004 8.004 0 0 0 7.998 7.998 7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998zM951.904 368.034H301.508a7.994 7.994 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h650.396c4.422 0 8 3.576 8 7.998a7.994 7.994 0 0 1-8 7.998zM919.912 480.01H349.498c-4.42 0-7.998-3.576-7.998-7.998s3.578-7.998 7.998-7.998h570.414c4.422 0 7.998 3.576 7.998 7.998s-3.576 7.998-7.998 7.998zM887.918 591.988H381.492a7.994 7.994 0 0 1-7.998-8 7.994 7.994 0 0 1 7.998-7.998h506.426a7.994 7.994 0 0 1 7.998 7.998c0 4.422-3.576 8-7.998 8zM296.034 815.942a7.9 7.9 0 0 1-3.468-0.796 7.982 7.982 0 0 1-3.724-10.67l47.35-98.184c1.912-3.966 6.694-5.624 10.678-3.732a8.004 8.004 0 0 1 3.724 10.684l-47.35 98.184a7.986 7.986 0 0 1-7.21 4.514zM264.36 815.942a7.89 7.89 0 0 1-3.466-0.796 7.98 7.98 0 0 1-3.726-10.67l47.35-98.184c1.914-3.966 6.694-5.624 10.678-3.732a8.006 8.006 0 0 1 3.726 10.684l-47.35 98.184a7.988 7.988 0 0 1-7.212 4.514zM919.912 879.928h-575.88a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8h575.88a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998zM919.912 847.934h-575.88a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h575.88a7.994 7.994 0 0 1 7.998 7.998 7.992 7.992 0 0 1-7.998 7.998z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M344.032 879.928c-48.514 0-87.982-32.292-87.982-71.986a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998c0 30.87 32.292 55.988 71.986 55.988a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M344.032 847.934c-26.432 0-55.988-17.106-55.988-39.992a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998c0 11.67 20.558 23.996 39.992 23.996a7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998zM919.912 879.928a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8a8 8 0 0 0 7.998-7.996c0-4.406-3.592-8-7.998-8a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998c13.23 0 23.994 10.764 23.994 23.996 0 13.23-10.764 23.994-23.994 23.994zM855.926 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v287.942a7.994 7.994 0 0 1-7.998 7.996zM743.948 623.98a7.992 7.992 0 0 1-7.996-7.998v-287.94a7.992 7.992 0 0 1 7.996-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM631.97 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM519.994 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM408.018 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v287.942a7.992 7.992 0 0 1-7.998 7.996zM400.02 1007.9c-35.282 0-63.986-28.698-63.986-63.986 0-6.216 0.89-12.374 2.654-18.278a8 8 0 0 1 9.944-5.376 7.978 7.978 0 0 1 5.382 9.938 48.29 48.29 0 0 0-1.984 13.714c0 26.462 21.528 47.99 47.99 47.99s47.99-21.528 47.99-47.99c0-4.672-0.672-9.28-1.984-13.714a7.978 7.978 0 0 1 5.38-9.938 7.972 7.972 0 0 1 9.944 5.376 63.764 63.764 0 0 1 2.656 18.278c0 35.29-28.706 63.986-63.986 63.986z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M400.02 967.91c-17.988 0-35.804-42.118-47.576-77.454a7.988 7.988 0 0 1 5.052-10.108 7.968 7.968 0 0 1 10.116 5.044c11.022 33.056 26.442 64.176 32.986 66.596 5.388-2.42 20.808-33.54 31.828-66.596a7.968 7.968 0 0 1 10.116-5.044 7.984 7.984 0 0 1 5.054 10.108c-11.772 35.336-29.588 77.454-47.576 77.454zM815.934 1007.9c-35.274 0-63.986-28.698-63.986-63.986 0-6.232 0.906-12.388 2.656-18.292a8.026 8.026 0 0 1 9.964-5.36 8.024 8.024 0 0 1 5.376 9.954c-1.328 4.42-2 9.028-2 13.7 0 26.462 21.528 47.99 47.99 47.99s47.99-21.528 47.99-47.99c0-4.672-0.656-9.28-1.984-13.714a8.032 8.032 0 0 1 5.39-9.954 8.006 8.006 0 0 1 9.95 5.406 64.284 64.284 0 0 1 2.64 18.262c0 35.288-28.712 63.984-63.986 63.984z"
+                      fill=""
+                    ></path>
+                    <path
+                      d="M815.934 967.91c-17.996 0-35.804-42.118-47.584-77.454a8 8 0 0 1 5.062-10.108 7.988 7.988 0 0 1 10.122 5.044c11.014 33.056 26.434 64.176 32.978 66.596 5.388-2.42 20.806-33.54 31.822-66.596a7.982 7.982 0 0 1 10.122-5.044 7.994 7.994 0 0 1 5.062 10.108c-11.78 35.336-29.588 77.454-47.584 77.454z"
+                      fill=""
+                    ></path>
+                  </g></svg>
+              </a>
+              <p id="cart-icon">0</p>
+            </div>
+
+            <div class="cart-service" id="service-id">
+              <p class="close-btn">X</p>
+              <h3>Mi carrito</h3>
+
+              <div class="cart-items" id="cart-items"></div>
+
+              <h2>Total: $<strong class="price-total">0</strong></h2>
+
+              <button class="add-cita">Confirmar</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="container-img-sliders">
+      <div class="sliders active">
+        <img src="./img/spa-1.jpg" alt="" />
+        <div class="info">
+          <h2>Pretty Woman Nails</h2>
+          <p>
+            Viviendo una experiencia única en la ciudad, donde tu bienestar es
+            el objetivo.
+          </p>
+        </div>
+      </div>
+
+      <div class="sliders">
+        <img src="./img/spa-2.jpg" alt="" />
+        <div class="info">
+          <h2>Disfrute de la Relajación</h2>
+          <p>
+            Escápese del ajetreo y el bullicio con nuestros tratamientos de
+            masajes rejuvenecedores. <br />Relájese, refrésquese y rejuvenezca.
+          </p>
+        </div>
+      </div>
+      <div class="sliders">
+        <img src="./img/spa-3.jpg" alt="" />
+        <div class="info">
+          <h2>
+            Mejora tu apariencia <br />
+            con unas cejas preciosas
+          </h2>
+          <p>
+            Consigue el arco y la forma perfecta para tus cejas. <br />
+            ¡Nuestros expertos en cejas transformarán tu mirada!
+          </p>
+        </div>
+      </div>
+      <div class="sliders">
+        <img src="./img/spa-4.jpg" alt="" />
+        <div class="info">
+          <h2>Transforma tus uñas</h2>
+          <p>
+            Experimenta la máxima transformación de uñas con nuestros servicios
+            y siéntate como una mujer bonita. <br />
+            Descubra diseños de moda y tratamientos de lujo.
+          </p>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </section>
+
+    <section class="chat-whatsapp">
+      <div class="icon-whatsapp">
+        <a href="https://wa.link/wiepxl" class="btn-whatsapp" target="_blank"
+          ><i class="fab fa-whatsapp" style="color: #ffffff"></i
+        ></a>
+      </div>
+    </section>
+
+    <section class="container-empresa">
+      <h2 class="top">Sobre Nosotros</h2>
+      <hr />
+      <div class="container-info-empresa">
+        <div class="caja-empresa-info">
+          <div class="empresa-info">
+            <img src="./img/logo.jpg" alt="" />
+            <p>
+              Te brindaremos el mejor servicio con el personal calificado e
+              instalaciones cómodas, una experiencia relajante, un espacio para
+              el bienestar y un servicio impecable.
+            </p>
+          </div>
+        </div>
+        <div class="caja-empresa-img">
+          <div class="empresa-img">
+            <img src="./img/lugar.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-service">
+      <div class="serviceAll">
+        <h2 class="top">Nuestros Servicios</h2>
+        <hr />
+        <div class="service-parrafo">
+          <p>
+            Regálate uno de nuestros servicios exclusivos. Nuestros amados
+            expertos en belleza sorprenderán a tus cejas, te harán brillar y
+            mucho más. Te irás luciendo y sintiéndote mejor que nunca.
+          </p>
+        </div>
+        <div class="container-service-cajetin">
+          <div class="service-cajetin">
+            <article class="caja-icon-parrafo">
+              <div class="icon">
+                <img src="./img/ceja.png" alt="" />
+              </div>
+              <h4 class="caja-title">
+                <a  href="/cejas" class="top">Cejas</a>
+              </h4>
+              <div class="divider"></div>
+              <p>
+                Mejora tu apariencia con nuestros servicios profesionales que te
+                ofrecemos de cejas.
+              </p>
+            </article>
+          </div>
+          <div class="service-cajetin">
+            <article class="caja-icon-parrafo">
+              <div class="icon">
+                <svg
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill="#000000"
+                      d="M211.3 80.89C122.5 81.18 56.21 109.7 18.89 145l12.36 13C93.43 99.36 258.4 54.4 485.6 176.8l8.6-15.8c-108.8-58.6-204.6-80.37-282.9-80.11zm-96.9 84.81c-55.98 21.9-81.16 65.6-96.64 94.4l15.86 8.6c15.24-28.5 37.13-66.6 87.38-86.2 50.2-19.6 130.5-20.9 263.1 30.7l6.6-16.8c-91.7-32.6-187-64.8-276.3-30.7zm260.4 76c-177.5 91.5-260 65.2-352.46 41.4l-4.48 17.5c15.96 4.1 31.94 8.3 48.39 11.9-19.36 13.6-28.82 17.2-40.19 24.6 25.65-1.1 42.18-9.2 59.71-16.6-12.58 15.5-23.55 31-46 47.4 27.02-7.2 53.04-15.2 72.63-28.8-12.47 20-27.72 39.5-44.89 58.6 29.43-9.2 51.69-31.4 74.79-53.4-.3 19.1-9.2 38.2-15.5 57.3 21-19.3 30-33.2 42.7-52.5-1.2 29.2 7 52.8 14.2 82 4.5-27.9 9.5-55.9 9.5-82.9 15 25 35.1 47.8 60.4 68.1-13.5-23.5-27-46.9-34.1-71.3 25.8 24.5 52.7 48.3 85 68.2-21.5-23.5-41.9-47.3-55.1-72.7 23.2 21.8 46.5 43.6 85.3 56.2-28.1-19.3-46.1-41.2-59.3-64.3 26.7 22.4 56.6 42.3 92.7 57.2-31.9-22-49.9-44-62.2-66 26.4 21.8 56.6 36.2 82.9 50.6-20.8-19.2-43.5-37.6-54.4-60.4 21.5 18.7 46.9 26.8 72 35.5-23.3-15.5-36.7-26-50.6-44.3 22.2 11.2 40.7 15.6 67.4 22.2-17.4-9.7-35.9-23-47.8-34.5 26.7 6.7 56 7.8 83.6 7.4-25.3-6.6-52.8-12.4-67.4-22.5 58.4.5 62-4.6 86.5-16.8-51.8 3.8-84.7 2.9-103.3-19.1z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h4 class="caja-title"><a href="/pestana" class="top">Pestañas</a></h4>
+              <div class="divider"></div>
+              <p>
+                Consigue unas pestañas glamurosas con nuestros servicios
+                profesional de pestañas.
+              </p>
+            </article>
+          </div>
+          <div class="service-cajetin cajetinBorde">
+            <article class="caja-icon-parrafo">
+              <div class="icon">
+                <svg
+                  version="1.1"
+                  xmlns="https://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="68px"
+                  height="79px"
+                  viewBox="0 0 68 79"
+                  enable-background="new 0 0 68 79"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M7.05,78.563h20.743c3.887,0,7.05-3.165,7.05-7.054V44.496c0-3.89-3.162-7.055-7.05-7.055h-2.677v-0.617    c0.235-0.122,0.443-0.294,0.611-0.51c0.304-0.391,0.438-0.878,0.377-1.369c-0.061-0.493-0.31-0.934-0.701-1.239    c-0.091-0.071-0.187-0.133-0.287-0.185v-0.187c0.622-0.364,1.002-1.075,0.909-1.836c-0.075-0.596-0.425-1.092-0.909-1.375v-0.328    c0.622-0.364,1.002-1.075,0.909-1.836c-0.085-0.681-0.531-1.23-1.125-1.481c-0.399-0.916-1.311-1.55-2.367-1.55H12.309    c-1.425,0-2.584,1.16-2.584,2.585v0.748c-0.621,0.364-1.001,1.074-0.908,1.833c0.061,0.493,0.31,0.934,0.701,1.239    c0.066,0.052,0.135,0.099,0.207,0.14v0.325c-0.621,0.364-1.001,1.075-0.908,1.834c0.061,0.493,0.31,0.933,0.701,1.239    c0.066,0.052,0.136,0.099,0.207,0.14v0.28c-0.169,0.111-0.321,0.25-0.449,0.415c-0.305,0.392-0.439,0.88-0.377,1.372    c0.016,0.125,0.044,0.246,0.083,0.362H7.05c-3.887,0-7.05,3.165-7.05,7.055v27.012C0,75.398,3.163,78.563,7.05,78.563z    M22.925,29.637v1.341c0,0.228,0.074,0.447,0.203,0.63l-11.286,1.395c0.046-0.121,0.074-0.252,0.074-0.388v-1.618L22.925,29.637z    M11.84,37.21c-0.053-0.137-0.133-0.264-0.238-0.371c0.195-0.199,0.314-0.471,0.314-0.769v-0.866l11.009-1.361v0.591    c0,0.289,0.114,0.565,0.315,0.769c-0.165,0.168-0.271,0.391-0.301,0.635L11.84,37.21z M12.309,27.12h10.223    c0.186,0,0.335,0.133,0.375,0.309l-10.991,1.359v-1.275C11.916,27.297,12.093,27.12,12.309,27.12z M2.191,44.496    c0-2.681,2.18-4.863,4.859-4.863h3.771c0.204,0,0.393-0.06,0.557-0.157l11.548-1.428v0.489c0,0.605,0.49,1.096,1.095,1.096h3.772    c2.679,0,4.859,2.182,4.859,4.863v27.012c0,2.681-2.18,4.862-4.859,4.862H7.05c-2.679,0-4.859-2.181-4.859-4.862V44.496z"
+                    ></path>
+                    <path
+                      d="M45.358,76.438C45.376,77.854,46.533,79,47.952,79h15.177c1.418,0,2.575-1.145,2.594-2.559l2.275-37.28    C67.999,39.139,68,39.117,68,39.095c0-1.432-1.164-2.596-2.595-2.596h-6.668V18.745c0-0.893-0.453-1.682-1.14-2.15l3.169-14.554    c0.099-0.455-0.105-0.923-0.507-1.159C60.105,0.792,58.674,0,55.762,0c-2.884,0-4.427,0.771-4.593,0.858    c-0.43,0.227-0.654,0.713-0.549,1.188l3.25,14.591c-0.654,0.472-1.081,1.241-1.081,2.108v17.754h-6.961    c-1.431,0-2.596,1.165-2.596,2.596c0,0.02,0.001,0.041,0.002,0.061L45.358,76.438z M54.942,36.498V18.745    c0-0.243,0.198-0.441,0.441-0.441c0.134,0,0.262-0.024,0.38-0.069c0.118,0.045,0.246,0.069,0.38,0.069    c0.243,0,0.44,0.198,0.44,0.441v17.754H54.942z M52.928,2.502c0.601-0.165,1.551-0.346,2.834-0.346c1.25,0,2.145,0.172,2.702,0.329    l-2.739,12.578L52.928,2.502z M45.828,38.654h8.038h3.794h7.745c0.235,0,0.428,0.185,0.44,0.418l-2.274,37.266    c-0.001,0.022-0.002,0.044-0.002,0.066c0,0.243-0.198,0.441-0.441,0.441H47.952c-0.243,0-0.441-0.198-0.441-0.441    c0-0.02-0.001-0.041-0.002-0.061l-2.123-37.269C45.397,38.84,45.591,38.654,45.828,38.654z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h4 class="caja-title">
+                <a href="/Manicura" class="top">Manicura & pedicura</a>
+              </h4>
+              <div class="divider"></div>
+              <p>
+                Consiéntete con nuestros servicios de manicura & pedicura que te
+                traerán resultados sensacionales.
+              </p>
+            </article>
+          </div>
+
+          <div class="service-cajetin">
+            <article class="caja-icon-parrafo">
+              <div class="icon">
+                <svg
+                  version="1.1"
+                  xmlns="https://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="53px"
+                  height="79px"
+                  viewBox="0 0 53 79"
+                  enable-background="new 0 0 53 79"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M24.517,49.505c0-4.036-3.404-7.318-7.589-7.318c-4.185,0-7.59,3.283-7.59,7.318    c0,4.036,3.405,7.318,7.59,7.318C21.113,56.824,24.517,53.541,24.517,49.505z M16.929,54.697c-2.969,0-5.384-2.329-5.384-5.191    c0-2.862,2.415-5.191,5.384-5.191c2.968,0,5.383,2.329,5.383,5.191C22.312,52.368,19.897,54.697,16.929,54.697z"
+                    ></path>
+                    <path
+                      d="M32.595,42.187c-4.185,0-7.59,3.283-7.59,7.318c0,4.036,3.405,7.318,7.59,7.318    c4.185,0,7.589-3.283,7.589-7.318C40.184,45.47,36.78,42.187,32.595,42.187z M32.595,54.697c-2.969,0-5.384-2.329-5.384-5.191    c0-2.862,2.415-5.191,5.384-5.191c2.968,0,5.383,2.329,5.383,5.191C37.978,52.368,35.563,54.697,32.595,54.697z"
+                    ></path>
+                    <path
+                      d="M18.367,49.346h-2.811c-0.609,0-1.103,0.476-1.103,1.064c0,0.587,0.494,1.064,1.103,1.064h2.811    c0.609,0,1.103-0.476,1.103-1.064C19.47,49.822,18.977,49.346,18.367,49.346z"
+                    ></path>
+                    <path
+                      d="M34.359,49.346h-2.811c-0.609,0-1.103,0.476-1.103,1.064c0,0.587,0.494,1.064,1.103,1.064h2.811    c0.609,0,1.103-0.476,1.103-1.064C35.462,49.822,34.968,49.346,34.359,49.346z"
+                    ></path>
+                    <path
+                      d="M50.106,22.208c0.27-0.629,0.478-1.276,0.665-1.868c0.095-0.301,0.186-0.59,0.281-0.858    c0.767-2.174,1.208-3.992,1.389-5.726c0.415-3.992-0.681-7.672-3.006-10.096c-1.847-1.925-4.564-3.183-7.65-3.54    c-6.279-0.723-16.443,1.751-18.307,9.383c-0.014,0.058-0.002,0.114-0.005,0.17c-6.556,0.664-13.412,3.655-17.228,7.854    c-4.499,4.953-5.611,11.874-6.056,16.649c-0.259,2.779-0.378,5.741,0.499,8.572c0.799,2.579,1.694,4.821,4.377,5.995    c0.087,0.516,0.199,1.418,0.199,2.656c0,12.897,10.503,27.6,19.715,27.6c8.858,0,18.902-13.591,19.663-26.101    c2.572-2.175,4.076-5.212,4.988-7.358c2.118-4.992,3.249-10.177,3.364-15.412C53.048,27.655,52.795,24.178,50.106,22.208z    M24.979,76.873c-7.322,0-17.51-12.836-17.51-25.472c0-1.903-0.238-3.122-0.332-3.532C6.996,41.117,12.68,36.16,24.477,32.746    c0.167-0.005,0.334-0.011,0.502-0.011c10.636,0,17.509,7.327,17.509,18.665c0,0.292-0.011,0.583-0.022,0.875    c-0.003,0.025-0.001,0.049-0.002,0.074C41.975,64.671,32.118,76.873,24.979,76.873z M47.588,44.734    c-0.627,1.478-1.558,3.42-2.942,5.094c-0.526-9.444-5.784-16.278-13.844-18.466c3.699-0.67,7.528-1.585,8.669-4.285    c0.743-1.755,0.19-3.849-1.689-6.404c-0.352-0.478-1.041-0.591-1.538-0.252c-0.496,0.34-0.613,1.004-0.261,1.483    c1.388,1.886,1.874,3.357,1.446,4.37c-0.809,1.914-4.921,2.631-8.225,3.209c-1.235,0.216-2.402,0.42-3.383,0.675    C12.578,33.616,5.75,38.889,5.005,46.233c-1.128-0.882-1.626-2.228-2.203-4.092c-0.77-2.488-0.655-5.206-0.415-7.774    c0.417-4.478,1.443-10.953,5.518-15.437c4.428-4.874,13.804-8.066,20.909-7.106c3.097,0.416,7.233,1.821,9.358,6.149    c0.261,0.531,0.918,0.759,1.469,0.506c0.551-0.252,0.785-0.886,0.525-1.417c-2.016-4.104-5.835-6.644-11.047-7.345    c-1.08-0.145-2.201-0.199-3.344-0.182c1.807-5.746,10.191-7.949,15.747-7.303c2.568,0.297,4.802,1.318,6.295,2.872    c1.897,1.977,2.783,5.053,2.43,8.439c-0.163,1.568-0.57,3.237-1.282,5.253c-0.102,0.288-0.2,0.601-0.302,0.924    c-0.391,1.24-0.835,2.645-1.684,3.217c-0.345,0.231-0.853,0.321-1.263,0.223c-0.246-0.058-0.413-0.169-0.499-0.329    c-0.279-0.523-0.944-0.727-1.485-0.457c-0.541,0.269-0.754,0.911-0.474,1.432c0.379,0.709,1.064,1.212,1.928,1.418    c0.283,0.067,0.578,0.101,0.874,0.101c0.775,0,1.559-0.225,2.183-0.645c0.268-0.181,0.498-0.397,0.712-0.628    c1.31,1.088,1.901,3.012,1.835,6.031C50.68,35.056,49.603,39.986,47.588,44.734z"
+                    ></path>
+                    <path
+                      d="M28.86,65.861c-2.378,2.288-5.364,2.357-7.792,0.186c-0.446-0.399-1.143-0.375-1.559,0.056    c-0.414,0.431-0.389,1.103,0.058,1.503c1.597,1.429,3.448,2.14,5.296,2.14c1.955,0,3.907-0.795,5.555-2.38    c0.431-0.415,0.432-1.088,0.002-1.504C29.99,65.447,29.292,65.447,28.86,65.861z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h4 class="caja-title">
+                <a href="/proteccion" class="top">Protección de la piel</a>
+              </h4>
+              <div class="divider"></div>
+              <p>
+                Ofrecemos una gama completa de servicios relajantes para el
+                cuidado de la piel, incluidos todo tipo de tratamientos
+                faciales.
+              </p>
+            </article>
+          </div>
+          <div class="service-cajetin cajetinBorde">
+            <article class="caja-icon-parrafo">
+              <div class="icon">
+                <svg
+                  version="1.1"
+                  xmlns="https://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="80px"
+                  height="79px"
+                  viewBox="0 0 80 79"
+                  enable-background="new 0 0 80 79"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M57.805,45.6c2.708-0.118,5.171-0.317,7.312-0.671c2.246-0.371,9.083-1.501,9.083-7.008  c0-6.467-15.144-15.711-25.329-18.602c5.837-1.259,8.962-3.659,8.962-7.066C57.833,6.587,48.879,0,37.333,0  c-11.546,0-20.5,6.587-20.5,12.252c0,4.265,4.873,6.961,13.874,7.804c-10.661,2.737-18.937,8.517-18.937,14.38  c0,5.851,8.064,9.06,18.174,10.458C15.756,48.781,0,58.434,0,68.454c0,2.556,0.822,4.662,2.443,6.256  c4.639,4.564,15.223,4.404,28.633,4.209c5.748-0.087,12.165-0.086,17.913,0.001c2.663,0.041,5.215,0.08,7.631,0.08  c9.716,0,17.231-0.624,20.941-4.273c1.62-1.593,2.44-3.698,2.44-6.253c0-4.616-2.601-9.613-7.325-14.07  C68.562,50.524,63.44,47.532,57.805,45.6z M19.135,12.252c0-4.007,7.642-9.953,18.198-9.953c10.556,0,18.198,5.945,18.198,9.953  c0,3.571-6.973,5.79-18.198,5.79C26.108,18.042,19.135,15.824,19.135,12.252z M14.265,34.436c0-5.962,13.784-13.528,29.275-13.528  c8.185,0,28.165,11.163,28.165,17.012c0,1.457-0.725,3.513-6.995,4.549c-4.55,0.753-10.724,0.809-17.842,0.8  c-2.294-0.211-4.618-0.255-6.945-0.125c-0.193,0.011-0.393,0.031-0.59,0.046C24.378,42.646,14.265,39.2,14.265,34.436z  M75.632,72.774c-3.812,3.751-14.373,3.586-26.603,3.406c-2.896-0.045-5.921-0.089-9.029-0.089c-3.086,0-6.088,0.043-8.965,0.087  c-12.263,0.181-22.846,0.339-26.666-3.42c-1.092-1.075-1.624-2.483-1.624-4.303c0-9.877,21.912-21.698,37.334-22.572  c13.606-0.78,24.788,4.925,30.711,10.514c4.109,3.877,6.466,8.279,6.466,12.078C77.256,70.293,76.725,71.7,75.632,72.774z"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="caja-title"><a href="/Masajes" class="top">Masajes</a></h4>
+              <div class="divider"></div>
+              <p>
+                Nuestros servicios de masaje pueden ayudarlo a deshacerse de las
+                emociones negativas después de un día largo y ajetreado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="galery">
+      <div class="galery-title">
+        <h1 class="top">Galeria de Fotos</h1>
+        <hr />
+      </div>
+      <div class="galerys">
+        <figure data-behold-id="yBu50K8eLH3vSRLavfR5"></figure>
+      </div>
+    </section>
+
+    <section class="container-trabajadores">
+      <div class="trabajadores-title">
+        <h1 class="top">Nuestros Profesionales</h1>
+        <hr />
+      </div>
+      <section class="container-trabajadores-img">
+        <div class="card">
+          <img src="./img/trabajadoras/Gabriela.jpeg" alt="" />
+          <div class="informacion">
+            <h1 class="close open">Gabriela Barreto</h1>
+            <p class="close open">
+              Enfermera Estética <br />
+              (Cosmetologia-Cosmiatra-Dermocosmiatra-Esteticista)
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/trabajadoras/Duskely.jpeg" alt="" />
+          <div class="informacion">
+            <h1 class="close open">Duskely Delgado</h1>
+            <p class="close open">Técnico en Manicurista</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/trabajadoras/yaorivar.jpeg" alt="" />
+          <div class="informacion">
+            <h1 class="close open">Yaorivar Hergueta</h1>
+            <p class="close open">Técnico en Manicurista</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/trabajadoras/Yenny Perez.jpeg" alt="" />
+          <div class="informacion">
+            <h1 class="close open">Yenny Perez</h1>
+            <p class="close open">Técnico Manicurista</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/trabajadoras/Joselin Ramirez.jpeg" alt="" />
+          <div class="informacion">
+            <h1 class="close open">Joselin Ramirez</h1>
+            <p class="close open">Lashista Profesional</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="container-maps">
+      <div id="maps-title">
+        <p class="top">Nuestra Ubicación Geográfica</p>
+        <hr />
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <footer>
+      <div class="container-footer">
+        <div class="container-final">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Nuestros Horarios</h4>
+              <ul>
+                <li>Lunes - Sábados</li>
+                <li>8:00am - 12:00pm</li>
+                <li>1:00pm - 6:00pm</li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Formas de Pago</h4>
+              <ul>
+                <li>Efectivo</li>
+                <li>Pago movil</li>
+                <li>Zelle</li>
+              </ul>
+            </div>
+
+            <div class="footer-col container-social">
+              <h4>Siguenos</h4>
+              <div class="social-link">
+                <a
+                  href="https://www.instagram.com/pretty.woman.yh_nails/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="parrafo-derechos">
+            <h3>
+              Pretty Woman © Copyright 2023. Todos los Derechos Reservados.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/rutas.js"></script>
+    <script src="./js/shoopingCart.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/sliders.js"></script>
+    <script src="https://w.behold.so/widget.js" type="module"></script>
+    <script src="./js/menu.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scroll.js"></script>
+    
+  </body>
+</html>

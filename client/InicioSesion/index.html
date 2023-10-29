@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    >
+    <title>Pretty Woman</title>
+  </head>
+  <body>
+    <header></header>
+
+    <section class="container-login">
+      <div class="mensaje">
+        <h1 class="scrollTop">Bienvenidos</h1>
+        <p>
+          Ahora, vivir una experiencia o un detalle bonito, es más fácil que
+          nunca. Para ello, lo único que tienes que hacer es elegir qué es lo
+          que más te gusta de nuestros servicios. Así que comienza a elegir
+          alguno de nuestros tratamientos, lo demás corre de nuestra parte.
+        </p>
+      </div>
+      <div class="login">
+        <h1 class="scrollTop">Iniciar Sesion</h1>
+        <label>Usuario</label>
+        <div>
+          <img
+            src="./img/usuario.png"
+            id="iconos"
+            alt=""
+            width="25px"
+            height="25px"
+          />
+          <input type="text" placeholder="Enter email" id="email" required />
+          <label id="errorEmail"></label>
+        </div>
+        <label>Password</label>
+        <div>
+          <img
+            src="./img/cerrar-con-llave.png"
+            id="iconos"
+            alt=""
+            width="28px"
+            height="28px"
+          />
+          <input type="password" id="password" placeholder="Enter password" />
+          <img
+            src="./img/ojo.png"
+            id="icono-mostrar"
+            width="28px"
+            height="28px"
+          />
+          <label id="errorPassword"></label>
+        </div>
+        <div class="buton">
+          <input type="submit" value="Iniciar sesion" id="sing-up" />
+        </div>
+        <button id="btn-reset-contraseña">¿Olvido su Contraseña?</button>
+        <a href="/registro">Registrar Cuenta</a>
+      </div>
+
+      <div id="container-emergente" class="container-emergente">
+        <div class="emergente-contenido">
+          <h1>¡Envio de correo exitoso!</h1>
+          <p>Se envio el correo para recuperar su contraseña.</p>
+          <a href="/iniciosesion"><button class="btn-continue">Continuar</button></a>
+        </div>
+      </div>
+
+      <div id="container-emergente2" class="container-emergente">
+        <div class="emergente-contenido">
+          <h1>¡Iniciaste sesion con exito!</h1>
+          <p>Iniciaste sesion correctamente.</p>
+          <a ><button class="btn-continue btn2">Continuar</button></a>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="chat-whatsapp">
+      <div class="icon-whatsapp">
+        <a href="https://wa.link/wiepxl" class="btn-whatsapp" target="_blank"
+          ><i class="fab fa-whatsapp" style="color: #ffffff"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer></footer>
+    
+    
+    <script src="./js/headerAndFooter.js"></script>
+    <script src="./js/rutas.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/shoopingCart.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="module" src="./js/firebase.auth.js"></script>
+    <script type="module" src="./js/firebase.config.js"></script>
+    
+  </body>
+</html>

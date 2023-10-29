@@ -1,0 +1,45 @@
+.container-emergente {
+    position: absolute; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    backdrop-filter: blur(2px);
+    display: grid;
+    place-items: center;
+    display: none;
+  }
+
+  .emergente-contenido {
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; 
+    text-align: center;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease-in-out;
+    background-color: aliceblue;
+  }
+
+  .emergente-contenido:hover {
+    transform: scale(1.05)
+  }
+
+  .btn-continue {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    transition-duration: 0.4s;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .btn-continue:hover {
+    color: #15dab2c2;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+  }

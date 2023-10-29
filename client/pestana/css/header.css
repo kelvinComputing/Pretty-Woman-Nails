@@ -1,0 +1,294 @@
+
+
+.container-logo-menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 300px;
+    height: 130px;
+    filter: contrast(120%);
+}
+
+.container-menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container-menu ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.container-menu li a {
+    font-size: 18px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: black;
+}
+
+.container-menu li a:hover{
+    border-bottom: #cef1ea solid 2px;
+    color: #08dfb4;
+}
+
+.container-menu li:active{
+    transform: translateY(4px);
+}
+
+.down-menu {
+    display: none;
+}
+
+.container-menu ul li:hover .down-menu {
+    display: block;
+    position: absolute;
+    left: -320%;
+    top: 110%;
+}
+
+.container-menu ul li:hover .down-menu ul {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    border-right: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb ;
+}
+
+.container-menu ul li:hover .down-menu ul li {
+    display: block; 
+    display: flex; 
+    border-right: 1px solid #ebebeb;
+    margin: 0;
+    padding: 5px;
+}
+
+.container-menu ul li:hover .down-menu ul li a {
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 5px;
+    width: 70px;
+}
+
+.barra-menu {
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+.icon-login1 {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-login1:hover {
+    fill: #08dfb4;
+    margin-bottom: 10px;
+    transition-duration: .5s;
+}
+
+
+/* Carrito */
+.icon-cart {
+    width: 25px;
+    height: 25px;
+    margin-right: 2rem;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.icon-cart:hover {
+    fill: #08dfb4;
+}
+
+.container-cart:hover {
+    margin-bottom: 10px;
+    transition-duration: .5s;
+}
+
+.container-cart a {
+    position: relative;
+}
+
+.container-cart p {
+    position: absolute;
+    top: 38px;
+    right: 1.5%;
+    background-color: #eee;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: #d44343d5;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+/* mostrar servicios agregados */
+.cart-service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 0 18px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    top: 15%;
+    left: 0;
+    height: 86vh;
+    width: 300px;
+    display: none;
+    overflow: scroll;
+}
+
+.cart-service p {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #000;
+    text-align: end;
+    font-size: 20px;
+}
+
+.cart-service p:hover {
+    color: #08dfb4;
+}
+
+
+.item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #08dfb4;
+    margin: 1rem 0;
+}
+
+.item-content {
+    margin: 0 19px;
+    width: 201px;
+}
+
+.item-content h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.item-content h6{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.item span{
+    background-color: #d44343d5;
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: system-ui;
+    cursor: pointer;
+}
+
+h5.cart-price {
+    font-weight: 700;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .container-menu li a {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .container-menu ul li:hover .down-menu ul li {
+        padding: 3px;
+    }
+
+    .container-menu ul li:hover .down-menu ul li a {
+        width: 55px;
+        margin: 0 2px;
+        font-size: 12px;
+    }
+
+    .container-menu ul li:hover .down-menu {
+        left: -150%;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .container-cart p{
+        display: none;
+    }
+
+    .barra-menu {
+        display: block;
+        padding-left: 5px ;
+        cursor: pointer;
+    }
+
+    .container-menu {
+        width: 100%;
+        height: 0;
+        transition: all .5s ease;
+        align-items: flex-start;
+        justify-content: center;
+        display: flex;
+        overflow: hidden; 
+        pointer-events: none;
+    }
+
+    .container-menu.activo {
+        display: block;
+        height: 9vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        pointer-events: auto;
+    }
+
+    .container-menu ul li:hover .down-menu {
+        left: -185%;
+    }
+
+    .container-menu li a {
+        font-size: 14px;
+    }
+
+    .container-menu ul li:hover .down-menu ul li a {
+        font-size: 11px;
+        margin:0 4px;
+        width: 35px;
+    }
+
+    .container-menu ul li:hover .down-menu ul li  {
+        padding: 4px;
+    }
+
+    .container-logo-menu {
+        margin-bottom: 5px;
+    }
+
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header></header>
+
+    <section class="cotainer-img-title">
+        <div class="img-title">
+            <img src="./img/principal.jpg" alt="">
+            <h2 class="Stitle">Pretty Woman Nails</h2>
+            <h1 class="Sinf">Reserva tu Cita</h2>
+        </div>
+
+    </section>
+
+
+    <section class="container-cita">
+        <div class="resevar-cita">
+
+            <div class="ayuda-cita">
+                <p>Tiene algun problema agendando su cita? Llamanos! Somos magos con la agenda! </p>
+                <p>+58 412-500826</p>
+            </div>
+
+            <div class="seleccion-servicio">
+                <div class="number">
+                    <h1><span class="radius">1</span>
+                </div>
+                <div class="service-title">
+                    <span> Ver tus servicios</span>
+                    <div id="servicesUser"></div>
+                </div>
+                <div class="service-btn">
+                    <button class="btnServ">Seleccionar</button></h1>
+                </div>
+            </div>
+
+            <div class="seleccion-fecha-cita">
+                <div class="fecha-cita">
+                    <div class="number">
+                        <h1><span class="radius">2</span>
+                    </div>
+                    <div class="service-title">
+                        <span>Fecha</span>
+                    </div>
+                    <div class="service-btn">
+                        <button class="btnFe">Seleccionar</button></h1>
+                    </div>
+                </div>
+
+                <div class="timezone-btn">
+                    <div class="timezone-container">
+                        <span id="timezone-label" class="babel-ignore">(GMT-0400) Venezuela</span>
+                        <span id="timezone-prompt"> Tu zona horaria </span>
+                    </div>
+
+                    <div class="container-btn">
+                        <button class="btn-fecha btn-prev-semana"><i class="fas fa-caret-left"> </i> Menos días </button>
+                        <button class="btn-fecha btn-next-semana">Más días <i class="fas fa-caret-right"> </i></button>
+                    </div>
+
+                    <div class="inf-semana-fecha">
+
+                            <!-- <ul>
+                                <label class="diaTop">Hoy</label>
+                                <label class="diaTop">Mañana</label>
+                                <label class="diaTop">FSFS</label>
+                                <label class="diaTop">FSFS</label>
+                                <label class="diaTop">FSFS</label>
+                                <label class="diaTop">FSFS</label>
+                            </ul> -->
+
+                            <ul>
+                                <li class="dia">Lunes</li>
+                                <li class="dia">Martes</li>
+                                <li class="dia">Miércoles</li>
+                                <li class="dia">Jueves</li>
+                                <li class="dia">Viernes</li>
+                                <li class="dia">Sábado</li>
+                            </ul>
+
+                            <table class="calendario">
+                                <tbody class="semana-actual"></tbody>
+                            </table>
+                    </div>
+
+                    <div class="container-horario">
+                        <ul>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <label class="btn-select"><button class="btn-select-horario">Continuar</button></label>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>8:00am</p>
+                                    <p>10:00am</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>10:00am</p>
+                                    <p>12:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>1:00pm</p>
+                                    <p>3:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                            <li>
+                                <button class="btn-horario">
+                                    <p>3:00pm</p>
+                                    <p>5:00pm</p>
+                                </button> <br>
+                                <button class="btn-select-horario">Continuar</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-datos">
+
+                <div class="seleccion-datos">
+                    <div class="number">
+                        <h1><span class="radius">3</span>
+                    </div>
+                    <div class="service-title">
+                        <span> Datos</span>
+                    </div>
+                    <div class="service-btn">
+                        <button class="btnDatos">Seleccionar</button></h1>
+                    </div>
+                </div>
+
+                <div class="formulario-datos">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Nombre" class="input-name">
+                    
+
+                    <label for="">Email</label>
+                    <input type="email" placeholder="correo@gmail.com" class="input-correo">
+
+                    <label for="">¿Tiene o has tenido fiebre en los últimos 14 días?</label>
+                    <input type="checkbox"> <span>Si</span> <br>
+                    <input type="checkbox"> <span>No</span>
+
+                    <label for="">¿Ha tenido problemas respiratorios, incluyendo tos, en los últimos 14 días? </label>
+                    <input type="checkbox"> <span>Si</span> <br>
+                    <input type="checkbox"> <span>No</span>
+
+                    <label for="">¿Ha estado en contacto con alguna persona positiva para CO-VID 19 en los últimos 14 días? </label>
+                    <input type="checkbox"> <span>Si</span> <br>
+                    <input type="checkbox"> <span>No</span>
+
+                    <button class="btn-reserver-cita">Reservar Cita</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-inf-cita">
+        <div class="inf-cita">
+            <div class="inf">
+                <p>La reserva en linea es muy fácil y lo puede hacer usted mismo desde su celular o computador, Si desea reservar su cita en linea lo puede hacer diligenciando el siguiente formulario, el cual le solicitará unos datos básicos de contacto y se le solicitara que especifique que servicio desea. Después de realizar su reserva sera enviado todos sus datos al chat directamente de whasappt para terminar de confirmar la reserva.</p>
+                <p>Aquí puede hacer su reserva en linea y el pago lo puede realizar en nuestras instalaciones después del servicio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="chat-whatsapp">
+        <div class="icon-whatsapp">
+          <a href="https://wa.link/wiepxl" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
+        </div>
+    </section>
+
+    <footer></footer>
+
+
+    <script src="./js/headerAndFooter.js"></script>
+    <script src="./js/rutas.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/shoopingCart.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/Seleccion.js"></script>
+</body>
+</html>

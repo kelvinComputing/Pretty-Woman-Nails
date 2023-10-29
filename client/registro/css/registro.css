@@ -1,0 +1,146 @@
+.container-registro {
+    width: 100%;
+    height: 41rem;
+    background-image: url(../img/Registro.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.registro{
+    background-color: #3ad4b6c2;
+    width: 29rem;
+    height: 34rem;
+    border-radius: 10%;
+    display: grid;
+    padding: 2rem;
+}
+
+.registro h1{
+    font-family: Monotype Corsiva;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.registro label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    color: #fff;
+}
+
+.registro input {
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.registro input[type='text'],
+.registro input[type='email'],
+.registro input[type='password'] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 2rem;
+    color: #faf9f9;
+    font-size: 1rem;    
+    text-indent: 2.5rem;
+}
+
+.buton{
+    width: 100%;
+    display: grid ;
+    justify-items: center;
+}
+
+.registro input[type='submit'] {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    transition-duration: 0.4s;
+}
+
+.registro a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #faf9f9;
+    text-align: center;
+}
+
+.registro a:hover {
+    color: #eee6ea;
+}
+
+.registro a:active {
+    transform: translateY(4px);
+}
+
+#registrar:hover{
+    background-color: rgb(224, 222, 222);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#registrar:active{
+    transform: translateY(4px);
+}
+
+.registro img {
+    position: absolute;
+}
+
+#errorName,
+#errorEmail,
+#errorPassword,
+#errorPassword2{
+    color: #ff0000b4;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    .registro {
+        background-color: #3ad4b6c2;
+        width: 25rem;
+        height: 29rem;
+    }
+
+    .registro h1 {
+        font-size: 2.5rem;  
+    }
+}
+
+@media screen and (max-width: 468px) {
+
+    .registro {
+        background-color: #3ad4b6c2;
+        width: 14rem;
+        height: 26.5rem;
+    }
+
+    .registro h1{
+        font-size: 2rem;  
+    }
+
+    .registro label {
+        font-size: 0.9rem;
+    }
+
+    .registro div img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}

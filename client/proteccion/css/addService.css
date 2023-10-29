@@ -1,0 +1,128 @@
+@import'./chat.css';
+@import './header.css';
+@import './footer.css';
+@import './emergente.css';
+
+*{
+    margin: 0;
+}
+
+.container-service-proteccion {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.service-proteccion-title {
+    width: auto;
+    margin: 1rem 1rem;
+}
+
+.service-proteccion-title h2 {
+    font-size: 2.5rem;
+}
+
+.service-proteccion-title hr {
+    width: 95%;
+    height: 3px;
+    border: none;
+    background: #cef1ea;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.service-proteccion-title p {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.container-add-service {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+}
+
+.add-Service {
+    display: grid;
+    width: auto;
+    height: auto;
+    border: PowderBlue 5px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.add-Service h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: #cef1ea;
+}
+
+.add-Service label {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    margin-bottom: 10px;
+}
+
+.add-Service input[type="text"] {
+    margin: 0 1.5rem;
+    margin-bottom: 2rem;
+    width: auto;
+    outline: none;
+    height: 30px;
+    text-indent: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem
+}
+
+.add-Service input[type="file"] {
+    margin: 0 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.add-Service div {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#btn-add-Serv{
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 15rem;
+    text-align: center;
+}
+
+#btn-add-Serv:hover {
+    color: #15dab2c2;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

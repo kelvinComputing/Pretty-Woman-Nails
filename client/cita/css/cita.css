@@ -1,0 +1,415 @@
+.cotainer-img-title{
+    margin-top: 2rem;
+}
+
+.img-title {
+    display: grid;
+    place-items: center;
+}
+
+.img-title img {
+    position: relative;
+    filter: brightness(65%);
+    width: 100%;
+    height: 200px;
+}
+
+.img-title h2 {
+    position: absolute;
+    font-size: 2rem ;
+    margin-bottom: 6rem;
+    color: #95fae6;
+}
+
+.img-title h1 {
+    position: absolute;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.container-cita {
+    height: auto;
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.resevar-cita {
+    display: grid;
+    row-gap: 20px;
+    width: 65%;
+    height: auto;    
+}
+
+.ayuda-cita {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 150px;
+    border: solid 1px #91919181;
+}
+
+.ayuda-cita p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.seleccion-servicio {
+    border: solid 1px #91919181;
+    height: auto;
+    padding: 15px;
+    width: 94.8%;  
+    display: flex;
+}
+
+
+
+.radius {
+        background: #95fae6;
+        border-radius: 0.8em;
+        -moz-border-radius: 0.8em;
+        -webkit-border-radius: 0.8em;
+        color: #494848;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.6em;
+        margin-right: 15px;
+        text-align: center;
+        width: 1.6em; 
+}
+
+.service-title {
+    display: grid;
+    align-content: center;
+    width: inherit;
+}
+
+.service-title span {
+    font-size: 1.5rem;
+}
+
+.service-btn {
+    display: grid;
+    justify-content: end;
+    width: inherit;
+}
+
+.service-btn button {
+    border: none;
+    outline: none;
+    height: 2rem;
+    background: rgb(199, 199, 199);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 10rem;
+    transition-duration: 0.4s;
+}
+
+.service-btn button:hover  {
+    color: #d44343d5;
+}
+
+.seleccion-fecha-cita {
+    border: solid 1px #91919181;
+    height: auto;
+    width: 100%;  
+}
+
+.fecha-cita {
+    display: flex;
+    width: 96.9%;
+    padding: 15px;
+}
+
+/* formulario calendario fechas */
+.timezone-btn {
+    margin: 1rem;
+    border: solid 1px #91919181;
+    height: auto;
+    display: grid;
+    display: none;
+}
+
+.timezone-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btn-fecha {
+    border: none;
+    background-color: #ffffff;
+}
+
+.btn-fecha:hover {
+    cursor: pointer;
+    color: #d44343d5;
+}
+
+.inf-semana-fecha {
+    background-color: #eee;
+    margin:5px 0;
+    padding: 12px;
+    
+}
+
+.inf-semana-fecha ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0;
+    text-align: center;
+}
+
+.dia {
+    font-size: 1.2rem;
+}
+
+.calendario {
+    width: 100%;
+    text-align: center;
+}
+
+.container-horario {
+    margin: 20px 0;
+} 
+
+.container-horario ul {
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+.container-horario li {
+    padding: 10px;
+
+}
+
+.container-horario li:hover {
+    border-radius: 12%;
+    border: solid 1px #d44343d5;
+
+}
+
+.btn-horario {
+    background-color: #ffffff;
+    border-radius: 12%;
+    border: none;
+}
+/* Botones */
+.btn-select-horario {
+    margin: 5px 0;
+    width: 100px;
+    height: 30px;
+    background:#d64040;
+    text-align: start;
+    border-radius: 1.5rem;
+    transition-duration: 0.4s;
+    border: none;
+    color: #fff;
+    /* display: none; */
+}
+
+.horario-title ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #eee;
+    
+}
+
+.container-horario ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 10px;
+}
+
+.container-datos {
+    border: solid 1px #91919181;
+    height: auto; 
+    margin-bottom: 1rem;
+}
+
+.seleccion-datos {
+    display: flex;
+    width: 96.9%;
+    padding: 15px;
+    height: auto;
+}
+
+ /* formulario de Datos */
+.formulario-datos {
+    padding: 1rem;
+    display: none;
+}
+
+.formulario-datos label{
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.formulario-datos input[type='text'], 
+.formulario-datos input[type='email'] {
+    height: 30px;
+    border: solid 1px #91919181;
+    margin-top: 1rem;
+    text-indent: 10px;
+}
+
+.formulario-datos input:focus {
+    border: none;
+    outline: solid 1px #d44343d5 ;
+}
+
+.input-name {
+    margin-right: 10px;
+    width: 40%;
+}
+
+.input-apellido {
+    width: 57%;
+}
+
+.input-correo {
+    width: 99%;
+}
+
+.formulario-datos input[type='checkbox']{
+    margin-right: 10px;
+    margin-top: 1rem;
+}
+
+.btn-reserver-cita {
+    display: block;
+    margin-top: 1.5rem;
+    width: 15%;
+    height: 30px;
+    background:#d64040;
+    text-align: start;
+    border-radius: 1.5rem;
+    transition-duration: 0.4s;
+    border: none;
+    color: #fff;
+    text-indent: 10px;
+}
+
+/* Formulario informacion de la cita */
+.container-inf-cita {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.inf-cita {
+    display: grid;
+    justify-items: center;
+    width: inherit;
+}
+
+.inf {
+    width: 70%;
+    padding: 20px;
+}
+
+.inf p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 767px){
+    .resevar-cita { 
+        width: auto;
+    }
+
+    .ayuda-cita{
+        width: 84%;
+    }
+
+    .seleccion-servicio{
+        width: 80%;
+    }
+
+    .seleccion-fecha-cita{
+        width: 85%;
+    }
+
+    .container-btn {
+        width: 94%;
+    }
+
+    .inf-semana-fecha{
+        width: 90%;
+    }
+
+    .dia {
+        font-size: 15px;
+    }
+
+    .semana-actual td {
+        font-size: 13px;
+        width: inherit;
+    }
+
+    .container-horario{
+        width: inherit;
+    }
+
+    .container-datos {
+        width: 85%;
+    }
+
+    .container-horario ul li p {
+        font-size: 12px;
+        
+    }
+
+    
+}
+
+@media screen and (max-width: 468px){
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

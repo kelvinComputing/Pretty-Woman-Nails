@@ -1,0 +1,148 @@
+.container-trabajadores {
+    margin-top: 1rem;
+    height: 100%;
+}
+
+.trabajadores-title {
+    display: grid;
+    place-items: center;
+}
+
+.trabajadores-title h1 {
+    padding-bottom: 1rem;
+    color: #080808;
+    font-weight: bold;
+    font-family: Monotype Corsiva;
+    font-size: 3rem;
+}
+
+.trabajadores-title hr {
+    width: 25%;
+    height: 3px;
+    border: none;
+    background: #cef1ea;
+}
+
+.container-trabajadores-img {
+    display: flex;
+    width: 100%;
+    height: 430px;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.card {
+    width: 0;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .8s ease;   
+}
+
+.card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.informacion{
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    height: 80px;
+    width: inherit;
+    bottom: 0px;  
+    display: grid;
+    place-items: center;
+}
+
+.informacion h1{
+    margin: 10px;
+    font-size: 30px;
+}
+
+.informacion p {
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0;
+}
+
+.card:hover {
+    cursor: pointer;
+    width: 100px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.card:hover .informacion{
+    width: 100%;
+    height: 150px;
+}
+
+.card:hover .informacion h1{
+    text-align: center;
+}
+
+
+.card:hover .informacion p {
+    opacity: 1;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px){
+
+    .trabajadores-title h1 {
+        font-size: 2rem;
+    }
+
+    .informacion h1 {
+        font-size: 25px;
+        margin: 5;
+    }
+
+    .informacion p {
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .informacion h1 {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 468px){
+
+    .trabajadores-title h1 {
+        text-align: center;
+    }
+
+    .informacion h1 {
+        font-size: 16px;
+    }
+
+    .informacion p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 385px){
+
+    .close {
+        display: none;
+    }
+
+    .card:hover .open{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+

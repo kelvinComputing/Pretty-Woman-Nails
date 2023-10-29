@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Pretty Woman</title>
+  </head>
+  <body>
+    <header></header>
+
+    <section class="container-registro">
+      <div class="registro">
+        <h1 class="title">Registrar</h1>
+        <label>Nombre</label>
+        <div>
+          <img src="./img/usuario.png" alt="" width="25px" height="25px" />
+          <input type="text" placeholder="Ingrese Su Nombre" id="name" />
+          <label id="errorName"></label>
+        </div>
+        <label>Correo</label>
+        <div>
+          <img src="./img/correo.png" alt="" width="28px" height="28px" />
+          <input type="email" placeholder="Ingrese Su Correo" id="email" />
+          <label id="errorEmail"></label>
+        </div>
+        <label>Contraseña</label>
+        <div>
+          <img
+            src="./img/cerrar-con-llave.png"
+            alt=""
+            width="28px"
+            height="28px"
+          />
+          <input type="password" id="password1" placeholder="********" />
+          <img src="./img/ojo.png" id="mostrar1" width="28px" height="28px" />
+          <label id="errorPassword"></label>
+        </div>
+        <label>Repita Su Contraseña</label>
+        <div>
+          <img
+            src="./img/cerrar-con-llave.png"
+            alt=""
+            width="28px"
+            height="28px"
+          />
+          <input type="password" id="password2" placeholder="*******" />
+          <img src="./img/ojo.png" id="mostrar2" width="28px" height="28px" />
+          <label id="errorPassword2"></label>
+        </div>
+        <div class="buton">
+          <input type="submit" value="Registrar" id="registrar" />
+        </div>
+        <a href="/iniciosesion">Ya estoy Registrado!</a>
+      </div>
+
+      <div class="container-emergente">
+        <div class="emergente-contenido">
+          <h1>¡Creando Usuario!</h1>
+          <p>Has creado el usuario correctamente.</p>
+          <a href="/iniciosesion"
+            ><button class="btn-continue">Continuar</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="chat-whatsapp">
+      <div class="icon-whatsapp">
+        <a href="https://wa.link/wiepxl" class="btn-whatsapp" target="_blank"
+          ><i class="fab fa-whatsapp" style="color: #ffffff"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    
+    <script src="./js/headerAndFooter.js"></script>
+    <script src="./js/rutas.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/shoopingCart.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/firebase.config.js"></script>
+  </body>
+</html>
